@@ -63,7 +63,7 @@ ul>li {
 /* 2. Home */
 
 .home {
-    background-image: linear-gradient(to top, rgba(34, 41, 69, 0.87), rgba(34, 41, 69, 0.87)), url("../image/backgrounds/home.png");
+    background-image: linear-gradient(to top, rgba(34, 41, 69, 0.87), rgba(34, 41, 69, 0.87)), url("../image/backgrounds/home.jpg");
     height: 100vh;
 }
 
@@ -517,7 +517,7 @@ ul>li {
 /* 4. About */
 
 .about {
-    background-image: linear-gradient(to top, rgba(34, 41, 69, 0.87), rgba(34, 41, 69, 0.87)), url("../image/backgrounds/about.png");
+    background-image: linear-gradient(to top, rgba(34, 41, 69, 0.87), rgba(34, 41, 69, 0.87)), url("../image/backgrounds/about.jpg");
     height: 100vh;
 }
 
@@ -603,7 +603,7 @@ ul>li {
 /* 5. Gallery */
 
 .gallery {
-    background-image: linear-gradient(to top, rgba(34, 41, 69, 0.87), rgba(34, 41, 69, 0.87)), url("../image/backgrounds/gallery.png");
+    background-image: linear-gradient(to top, rgba(34, 41, 69, 0.87), rgba(34, 41, 69, 0.87)), url("../image/backgrounds/gallery.jpg");
     height: 100vh;
 }
 
@@ -804,7 +804,7 @@ ul>li {
 /* 6. Blog */
 
 .blog {
-    background-image: linear-gradient(to top, rgba(34, 41, 69, 0.87), rgba(34, 41, 69, 0.87)), url("../image/backgrounds/blog.png");
+    background-image: linear-gradient(to top, rgba(34, 41, 69, 0.87), rgba(34, 41, 69, 0.87)), url("../image/backgrounds/blog.jpg");
     height: 100vh;
 }
 
@@ -1083,7 +1083,7 @@ ul>li {
 /* 8. Contact */
 
 .contact {
-    background-image: linear-gradient(to top, rgba(34, 41, 69, 0.87), rgba(34, 41, 69, 0.87)), url("../image/backgrounds/contacts.png");
+    background-image: linear-gradient(to top, rgba(34, 41, 69, 0.87), rgba(34, 41, 69, 0.87)), url("../image/backgrounds/contacts.jpg");
     height: 100vh;
 }
 

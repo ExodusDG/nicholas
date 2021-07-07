@@ -180,7 +180,7 @@ $(document).ready(function() {
 
     $('#home, #home_mini, #home_mb').click(homeActive)
     $('#about, #about_mini, #about_mb').click(aboutActive);
-    $('#gallery, #gallery_mini, #gallery_mb').click(galleryActive);
+    $('#gallery, #gallery_mini, #gallery_mb, .home__body_button').click(galleryActive);
     $('#blog, #blog_mini, #blog_mb').click(blogActive);
     $('#contact, #contact_mini, .menu_button, #contact_mb').click(contactActive);
 
