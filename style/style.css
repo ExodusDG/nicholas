@@ -10,6 +10,7 @@ Table of Contents
 7. Blog Page
 8. Contact
 9. Adaptive
+
 #FontAwesome
 
 =============================*/
@@ -69,7 +70,7 @@ ul>li {
 
 .home__body {
     margin-left: 25%;
-    padding-top: 5%;
+    padding-top: 7%;
     display: flex;
     justify-content: space-between;
 }
@@ -736,7 +737,7 @@ ul>li {
 }
 
 .slide {
-    margin-right: 100px;
+    margin-right: 0px;
 }
 
 .slide_item {
@@ -1150,7 +1151,7 @@ ul>li {
     font-size: 14px;
     margin-bottom: 20px;
     outline: none;
-    padding-top: 10px;
+    padding-top: 7px;
     resize: none;
     color: #F9B809;
 }
@@ -2289,6 +2290,7 @@ ul>li {
     }
     section {
         overflow-y: scroll;
+        overflow-x: hidden;
     }
     .blog {
         overflow: hidden;

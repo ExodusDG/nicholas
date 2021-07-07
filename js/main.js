@@ -31,7 +31,6 @@ $(document).ready(function() {
         /* MAX SCROLL WIDTH*/
         var blogPostsCount = $('.blog__body_items > div').length;
         var blogMaxWidth = (blogPostsCount - 4) * blogScrollWidth;
-        console.log(blogPostsCount)
         if (currentBlogButton == 'left') {
             if (blogCurrentTranslate == 0) {
                 return false;
@@ -41,13 +40,10 @@ $(document).ready(function() {
 
         } else if (currentBlogButton == 'right') {
             var blogPostsCount = $('.blog__body_items > div').length;
-            console.log(blogMaxWidth + '<' + ((blogCurrentTranslate * blogPostsCount) * -1))
             if ((blogCurrentTranslate * -1) > blogMaxWidth) {
 
                 return false;
             }
-            console.log((blogCurrentTranslate * -1))
-            console.log(blogMaxWidth)
             var blogTranslateWidth = Number(blogCurrentTranslate) - Number(blogScrollWidth);
             blogWrapper.attr('style', 'transform:translateX(' + blogTranslateWidth + 'px)')
         }
@@ -60,36 +56,33 @@ $(document).ready(function() {
 
     var scrollWrapper = $('.gallery_body_photo')
     var wrapperWidth = Number($('.gallery__body_wrapper').width()) + Number($('.slide_item').css('margin-right').replace('px', ''));
-    console.log(wrapperWidth);
     scrollWrapper.attr('style', 'transform:translateX(0px)')
     $('.button_slider').click(function() {
         var currentTranslate = Number($('.gallery_body_photo').attr('style').replace('transform:translateX(', '').replace('px)', ''));
         var currentButton = $(this).attr('id');
         var slideCount = $(".slide > div[class!='slide_item photo_hidden_class']").length; //
-        console.log(slideCount);
         var slideWidth = $('.slide > div').width();
         var maxWrapperWidth = slideCount * slideWidth * (-1);
 
-
         if (currentButton == 'left_b') {
-            var scrollWidth = currentTranslate + wrapperWidth;
             if (currentTranslate == 0) {
                 return false;
             }
             if (screenWidth < 601) {
                 var scrollWidth = currentTranslate + Number($('.slide_item').width()) + Number(($('.slide_item').css('margin-right').replace('px', '')));
+            } else {
+                var scrollWidth = currentTranslate + wrapperWidth;
             }
             $(scrollWrapper).attr('style', 'transform:translateX(' + scrollWidth + 'px)');
 
         } else if (currentButton == 'right_b') {
-            var scrollWidth = currentTranslate - wrapperWidth;
-
             if (scrollWidth < maxWrapperWidth) {
-                console.log(scrollWidth + "..." + maxWrapperWidth)
                 return false;
             }
             if (screenWidth < 601) {
                 var scrollWidth = currentTranslate - (Number($('.slide_item').width()) + Number(($('.slide_item').css('margin-right').replace('px', ''))));
+            } else {
+                var scrollWidth = currentTranslate - wrapperWidth;
             }
             $(scrollWrapper).attr('style', 'transform:translateX(' + scrollWidth + 'px)');
         }
@@ -102,10 +95,10 @@ $(document).ready(function() {
     $('.gallery__body_sort > p').click(function() {
         var currentClickedButton = $(this).attr('id').replace('_button', '');
         //    var hiddenItem = $('.slide_item').not('#' + currentClickedButton + '');
-
         function slideHide() {
             $('.slide_item').removeClass('photo_hidden_class').show();
-            $('.slide_item').not('#' + currentClickedButton + '').addClass('photo_hidden_class').hide();
+            $('.slide_item').not('.' + currentClickedButton + '').addClass('photo_hidden_class').hide();
+
         }
 
         if (currentClickedButton == 'all') {
@@ -219,7 +212,6 @@ $(document).ready(function() {
                 contactActive()
             }
 
-            console.log(countSlide)
         })
         /* END */
         /* HOME PAGE ACTIVE  */
